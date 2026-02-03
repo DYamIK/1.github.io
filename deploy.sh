@@ -25,7 +25,7 @@ git add .
 
 # 提交更改
 echo "💾 提交更改..."
-git commit -m "Deploy website to GitHub Pages - $(date '+%Y-%m-%d %H:%M:%S')"
+git commit -m "更新并部署 - $(date '+%Y-%m-%d %H:%M:%S')"
 
 # 推送到 GitHub
 echo "📤 推送到 GitHub..."
@@ -34,10 +34,7 @@ git push -u origin main
 echo ""
 echo "✅ 部署完成！"
 echo ""
-echo "🌐 网站将在几分钟后可访问："
-echo "   https://dyamik.github.io/1.github.io/"
-echo "   或者（如果是用户站点）："
-echo "   https://1.github.io/"
+echo "   https://dyamik.github.io/IJCAI-ECAI-26/"
 echo ""
 echo "⚠️  如果这是首次部署，请确保："
 echo "   1. 仓库是公开的（Public）"
