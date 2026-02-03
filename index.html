@@ -231,6 +231,225 @@
             vertical-align: middle;
         }
 
+        /* ─── 论文列表 ─── */
+        .paper-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: #0f172a;
+            width: 200px;
+        }
+
+        .search-icon {
+            width: 18px;
+            height: 18px;
+            color: #64748b;
+            flex-shrink: 0;
+            opacity: 0.6;
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 5px 14px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+            color: #374151;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .filter-btn:hover {
+            background: #f3f4f6;
+            border-color: #d1d5db;
+        }
+
+        .filter-btn.active {
+            background: #1d4ed8;
+            color: #fff;
+            border-color: #1d4ed8;
+        }
+
+        .paper-count {
+            margin-left: auto;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .paper-legend {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .dot-blue    { background: #3b82f6; }
+        .dot-purple  { background: #8b5cf6; }
+        .dot-green   { background: #10b981; }
+
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .paper-card {
+            padding: 16px 18px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s;
+        }
+
+        .paper-card:hover {
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .paper-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .paper-title {
+            flex: 1;
+            min-width: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4;
+        }
+
+        .paper-title:hover {
+            text-decoration: underline;
+        }
+
+        .paper-tags {
+            flex: 0 0 auto;
+            display: flex;
+            gap: 6px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 10px;
+            line-height: 1.4;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* Stage — 蓝色 */
+        .pill-perception, .pill-decision, .pill-execution {
+            background: #eaf2fe;
+            color: #1d4ed8;
+            border: 1px solid #cfe0f5;
+        }
+
+        /* Type — 紫色 */
+        .pill-attack, .pill-defense {
+            background: #f3e8ff;
+            color: #6d28d9;
+            border: 1px solid #e9d5ff;
+        }
+
+        /* Context — 绿色 */
+        .pill-physical, .pill-benchmark {
+            background: #eaf7ef;
+            color: #256c3a;
+            border: 1px solid #cfe8d7;
+        }
+
+        .paper-foot {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        .paper-author {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .paper-date {
+            padding: 2px 10px;
+            line-height: 20px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            background: #f3f4f6;
+            color: #374151;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .paper-link {
+            display: inline-flex;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .paper-link:hover {
+            background: #eff6ff;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8em;
@@ -247,6 +466,25 @@
             .affiliations {
                 flex-direction: column;
                 gap: 25px;
+            }
+
+            .paper-toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .paper-count {
+                margin-left: 0;
+            }
+
+            .paper-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .paper-title {
+                white-space: normal;
             }
         }
     </style>
@@ -347,6 +585,189 @@
         </section>
 
         <section>
+            <h2>Surveyed Papers</h2>
+            <div class="paper-toolbar">
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="paper-search" placeholder="Search papers...">
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="perception">Perception</button>
+                    <button class="filter-btn" data-filter="decision">Decision &amp; Planning</button>
+                    <button class="filter-btn" data-filter="execution">Execution</button>
+                </div>
+                <span class="paper-count" id="paper-count">10 papers</span>
+            </div>
+            <div class="paper-legend">
+                <span class="legend-item"><span class="legend-dot dot-blue"></span> Stage</span>
+                <span class="legend-item"><span class="legend-dot dot-purple"></span> Type</span>
+                <span class="legend-item"><span class="legend-dot dot-green"></span> Context</span>
+            </div>
+            <div class="paper-list" id="paper-list">
+
+                <article class="paper-card" data-tags="perception">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Adversarial Patch Attacks on Real-World Object Detection</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-perception">Perception</span>
+                            <span class="pill pill-attack">Attack</span>
+                            <span class="pill pill-physical">Physical</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Xiyue Li et al.</span>
+                        <span class="paper-date">2024.03</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="decision">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Backdoor Attacks to LLM-Based Embodied Agents</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-decision">Decision &amp; Planning</span>
+                            <span class="pill pill-attack">Attack</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Chenxu Wang et al.</span>
+                        <span class="paper-date">2024.06</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="perception">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Physical Adversarial Examples Against Deep Neural Networks</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-perception">Perception</span>
+                            <span class="pill pill-attack">Attack</span>
+                            <span class="pill pill-physical">Physical</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Yuchen Kurakin et al.</span>
+                        <span class="paper-date">2017.09</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="perception">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Robust Visual Navigation under Adversarial Perturbations</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-perception">Perception</span>
+                            <span class="pill pill-defense">Defense</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Kaicheng Yu et al.</span>
+                        <span class="paper-date">2023.11</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="decision">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Safety Alignment for LLM-Based Robot Task Planning</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-decision">Decision &amp; Planning</span>
+                            <span class="pill pill-defense">Defense</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Zhiyuan Liu et al.</span>
+                        <span class="paper-date">2024.08</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="perception decision">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Adversarial Attacks on Vision-and-Language Navigation</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-perception">Perception</span>
+                            <span class="pill pill-decision">Decision &amp; Planning</span>
+                            <span class="pill pill-attack">Attack</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Kun Shi et al.</span>
+                        <span class="paper-date">2023.05</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="perception">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Certified Robustness for Embodied AI Perception</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-perception">Perception</span>
+                            <span class="pill pill-defense">Defense</span>
+                            <span class="pill pill-benchmark">Benchmark</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Dongsheng Li et al.</span>
+                        <span class="paper-date">2024.01</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="execution">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Attacking and Defending Learned Manipulation Policies</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-execution">Execution</span>
+                            <span class="pill pill-attack">Attack</span>
+                            <span class="pill pill-defense">Defense</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Ruohan Zhang et al.</span>
+                        <span class="paper-date">2024.04</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="perception decision execution">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">RobustEmbod: A Benchmark for Adversarial Robustness in Embodied AI</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-benchmark">Benchmark</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Yuxin Chen et al.</span>
+                        <span class="paper-date">2024.09</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+                <article class="paper-card" data-tags="execution">
+                    <div class="paper-top">
+                        <a class="paper-title" href="#" target="_blank">Closed-Loop Adversarial Attacks on Robotic Manipulation</a>
+                        <div class="paper-tags">
+                            <span class="pill pill-execution">Execution</span>
+                            <span class="pill pill-attack">Attack</span>
+                            <span class="pill pill-physical">Physical</span>
+                        </div>
+                    </div>
+                    <div class="paper-foot">
+                        <span class="paper-author">Haojie Zhu et al.</span>
+                        <span class="paper-date">2024.07</span>
+                        <a class="paper-link" href="#" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" fill="currentColor"></path></svg></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
             <h2>Contact</h2>
             <p style="text-align: center; color: #666; font-size: 1.1em;">
                 For questions or collaboration, please contact:<br><br>
@@ -359,5 +780,38 @@
             <p>© 2026 Adversarial Robustness in Embodied AI | IJCAI-ECAI 2026</p>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var searchInput = document.getElementById('paper-search');
+            var filterBtns  = document.querySelectorAll('.filter-btn');
+            var cards       = document.querySelectorAll('.paper-card');
+            var countEl     = document.getElementById('paper-count');
+            var activeFilter = 'all';
+
+            function updateList() {
+                var query   = searchInput.value.toLowerCase();
+                var visible = 0;
+                cards.forEach(function(card) {
+                    var matchSearch = card.textContent.toLowerCase().includes(query);
+                    var matchFilter = activeFilter === 'all' || card.dataset.tags.includes(activeFilter);
+                    var show = matchSearch && matchFilter;
+                    card.style.display = show ? '' : 'none';
+                    if (show) visible++;
+                });
+                countEl.textContent = visible + ' paper' + (visible !== 1 ? 's' : '');
+            }
+
+            searchInput.addEventListener('input', updateList);
+
+            filterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    this.classList.add('active');
+                    activeFilter = this.dataset.filter;
+                    updateList();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
