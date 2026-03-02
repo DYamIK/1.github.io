@@ -81,3 +81,4 @@ bash deploy.sh   # commits everything and pushes to origin/main (GitHub Pages)
 
 Preview locally: open `index.html` directly in a browser, or `python3 -m http.server`.
 
+每次更改文件完之后, 更改deploy.sh, 并运行 bash deploy.sh
