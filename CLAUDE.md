@@ -80,3 +80,4 @@ bash deploy.sh   # commits everything and pushes to origin/main (GitHub Pages)
 ```
 
 Preview locally: open `index.html` directly in a browser, or `python3 -m http.server`.
+
