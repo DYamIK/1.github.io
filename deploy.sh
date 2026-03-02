@@ -25,7 +25,7 @@ git add .
 
 # 提交更改
 echo "💾 提交更改..."
-git commit -m "更新标题宽度 - $(date '+%Y-%m-%d %H:%M:%S')"
+git commit -m "恢复标题宽度 - $(date '+%Y-%m-%d %H:%M:%S')"
 
 # 推送到 GitHub
 echo "📤 推送到 GitHub..."
