@@ -25,7 +25,7 @@ git add .
 
 # 提交更改
 echo "💾 提交更改..."
-git commit -m "链接 PDF 文件到 Paper 按钮 - $(date '+%Y-%m-%d %H:%M:%S')"
+git commit -m "修复所属单位布局为横向排列 - $(date '+%Y-%m-%d %H:%M:%S')"
 
 # 推送到 GitHub
 echo "📤 推送到 GitHub..."
